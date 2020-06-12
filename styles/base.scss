@@ -1,0 +1,58 @@
+html {
+  font-size: $default-font-size;
+  @include device-mobile() {
+    font-size: $mobile-font-size;
+  }
+  @include device-tablet() {
+    font-size: $tablet-font-size;
+  }
+  body {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    font-size: $default-font-size;
+    color: $black;
+    font-family: "Noto Sans KR", "Quicksand", sans-serif !important;
+    letter-spacing: -0.56px;
+    //  background: linear-gradient(-135deg, $body-bg, darken($body-bg,  7));
+    a {
+      color: $main-color;
+      &:hover {
+        color: lighten($main-color, 5%);
+      }
+    }
+
+    section {
+      margin: 0px auto;
+      max-width: $body-max-width;
+      padding: 0px 12px;
+      width: 100%;
+    }
+
+    .ff-qs {
+      font-family: "Quicksand", sans-serif !important;
+    }
+    .fp {
+      font-family: "Quicksand", "Noto Sans KR", sans-serif !important;
+    }
+
+    div {
+      box-sizing: border-box;
+    }
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  [seal] {
+    box-sizing: border-box;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    background: none;
+    z-index: 2;
+  }
+}

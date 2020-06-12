@@ -1,0 +1,28 @@
+$colors: (
+  blue: #339af0,
+  red: #fa5252,
+  orange: #ff922b,
+  teal: #12b886,
+);
+
+//transition animation
+$default-transition-second: 0.25s;
+$default-transition-animation: cubic-bezier(0.215, 0.61, 0.355, 1);
+$transition: $default-transition-second $default-transition-animation;
+$default-transition-color: color $transition;
+
+//default setting
+$default-container-width: 1100px;
+$default-box-padding: 2rem;
+$default-box-padding-vertical: $default-box-padding 0rem;
+$default-box-padding-horizon: 0rem $default-box-padding;
+$default-box-radius: 4px;
+$default-box-margin: 5px;
+
+//grid box
+$grid-box-background: $white;
+$grid-box-color: $black;
+$grid-box-icon-color: $gray-op-5;
+$grid-box-padding: $default-box-padding;
+$grid-box-margin: $default-box-margin;
+$grid-box-border-radius: $default-box-radius;

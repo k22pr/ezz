@@ -1,0 +1,23 @@
+@import "../variable.scss";
+
+@mixin font-size($desktop, $tablet: $desktop, $mobile: $tablet) {
+  font-size: $desktop;
+
+  @include device-tablet() {
+    font-size: $tablet;
+  }
+  @include device-mobile() {
+    font-size: $mobile;
+  }
+}
+
+@mixin font-weight($desktop, $tablet: $desktop, $mobile: $tablet) {
+  font-weight: $desktop;
+
+  @include device-tablet() {
+    font-weight: $tablet;
+  }
+  @include device-mobile() {
+    font-weight: $mobile;
+  }
+}

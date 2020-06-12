@@ -1,0 +1,78 @@
+@import "../variable.scss";
+
+//term을 줄수 잇는 최대 픽셀
+$maxLoop: 20;
+
+@for $max from 1 through 12 {
+  .w#{$max*1} {
+    width: calc(100% * (#{$max}/ 12));
+  }
+}
+
+@for $i from 1 through $maxLoop {
+  [term="#{$i}"] {
+    margin-top: $i * -1px;
+    margin-bottom: $i * -1px;
+    margin-left: $i * -1px;
+    margin-right: $i * -1px;
+    @for $max from 1 through 12 {
+      &.w#{$max} {
+        width: calc(100% * (#{$max}/ 12) + #{$i * 2}px);
+      }
+      > .w#{$max} {
+        width: calc(100% * (#{$max}/ 12) - #{$i * 2}px);
+        margin-top: $i * 1px;
+        margin-bottom: $i * 1px;
+        margin-left: $i * 1px;
+        margin-right: $i * 1px;
+      }
+    }
+  }
+}
+
+body {
+  @for $d from 1 through length($device-name) {
+    @media (min-width: nth($device-size,$d)) and (max-width: nth($device-size,$d+1) + 1px) {
+      @for $max from 1 through 12 {
+        .#{nth($device-name,$d)}w#{$max*1} {
+          width: calc(100% * (#{$max}/ 12));
+        }
+      }
+
+      @for $i from 1 through $maxLoop {
+        [#{nth($device-name,$d)}t="#{$i}"] {
+          margin-top: $i * -1px;
+          margin-bottom: $i * -1px;
+          margin-left: $i * -1px;
+          margin-right: $i * -1px;
+          @for $max from 1 through 12 {
+            &.w#{$max} {
+              width: calc(100% * (#{$max}/ 12) + #{$i * 2}px);
+            }
+            &.#{nth($device-name,$d)}w#{$max} {
+              width: calc(100% * (#{$max}/ 12) + #{$i * 2}px);
+            }
+            > .w#{$max} {
+              width: calc(100% * (#{$max}/ 12) - #{$i * 2}px);
+              margin-top: $i * 1px;
+              margin-bottom: $i * 1px;
+              margin-left: $i * 1px;
+              margin-right: $i * 1px;
+            }
+            > .#{nth($device-name,$d)}w#{$max} {
+              width: calc(100% * (#{$max}/ 12) - #{$i * 2}px);
+              margin-top: $i * 1px;
+              margin-bottom: $i * 1px;
+              margin-left: $i * 1px;
+              margin-right: $i * 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.w20 {
+  width: 20%;
+}

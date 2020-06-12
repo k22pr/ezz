@@ -1,0 +1,58 @@
+@import "../variable.scss";
+
+.flex,
+[flex] {
+  display: flex;
+  flex-wrap: wrap;
+
+  &[f-dir="column"],
+  &[fdc] {
+    flex-direction: column;
+  }
+  &[f-dir="row"],
+  &[fdr] {
+    flex-direction: row;
+  }
+
+  &[f-jus="start"],
+  &[fjs] {
+    justify-content: flex-start;
+  }
+  &[f-jus="end"],
+  &[fje] {
+    justify-content: flex-end;
+  }
+  &[f-jus="center"],
+  &[fjc] {
+    justify-content: center;
+  }
+  &[f-jus="between"],
+  &[fjb] {
+    justify-content: space-between;
+  }
+
+  &[f-items="start"],
+  &[fis] {
+    align-items: flex-start;
+  }
+  &[f-items="end"],
+  &[fie] {
+    align-items: flex-end;
+  }
+  &[f-items="center"],
+  &[fic] {
+    align-items: center;
+  }
+  &[f-items="base"],
+  &[fib] {
+    align-items: baseline;
+  }
+  &[f-items="stretch"],
+  &[fist] {
+    align-items: stretch;
+  }
+
+  &[nowrap] {
+    flex-wrap: nowrap;
+  }
+}

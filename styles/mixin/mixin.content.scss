@@ -1,0 +1,20 @@
+@import "../variable.scss";
+
+@mixin content-box() {
+  max-width: calc(#{$page-max-width} - 280px);
+  padding: 0px 20px;
+  width: 100%;
+  @include device-lte-tablet() {
+    max-width: calc(#{$page-max-width} - 280px);
+    padding: 0px 20px;
+  }
+}
+
+@mixin content-box-left() {
+  max-width: calc(#{$page-max-width} - 140px);
+}
+
+@mixin content-box-center() {
+  @include content-box();
+  margin: 0px auto;
+}

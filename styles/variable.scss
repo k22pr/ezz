@@ -1,0 +1,36 @@
+@import "./lib/open-color.scss";
+
+$white: #fff;
+$black: rgb(20, 23, 26);
+$default-color: $black;
+$main-color: $oc-blue-6;
+$main-deep: rgb(255, 139, 0);
+$sub-color: $oc-violet-5;
+$popup-bg: rgba(248, 249, 250, 0.75);
+
+$default-border-color: rgba(0, 0, 0, 0.05);
+
+$body-bg: #131720;
+$footer-background: #727071;
+
+$body-max-width: 1440px;
+$content-max-width: 1280px;
+$page-max-width: 1920px;
+$side-width: 300px;
+
+$default-font-size: 14px;
+$tablet-font-size: 13px;
+$mobile-font-size: 13px;
+
+$vector: (
+  t: top,
+  r: right,
+  b: bottom,
+  l: left,
+);
+$device-name: (m, t, d);
+$device-size: (0px, 540px, 1100px, 65535px);
+
+// 글자 쉐도우
+$ws: rgba(255, 255, 255, 0.75);
+$bs: rgba(0, 0, 0, 0.75);

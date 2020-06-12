@@ -1,0 +1,37 @@
+[por],
+.por {
+  position: relative;
+}
+
+[abcc],
+.abcc {
+  position: relative;
+  overflow: hidden;
+  &[cw],
+  &.cw {
+    > * {
+      width: 100%;
+    }
+  }
+  &[ch],
+  &.ch {
+    > * {
+      height: 100%;
+    }
+  }
+  > *,
+  > img {
+    z-index: 1;
+    @include absoluteCenter();
+    [pb],
+    &.pb {
+      top: auto;
+      bottom: -100%;
+    }
+  }
+}
+
+[abc],
+.abc {
+  @include absoluteCenter();
+}

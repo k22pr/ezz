@@ -1,0 +1,16 @@
+@import "../import.scss";
+
+section {
+  .login-page {
+    width: $content-max-width;
+    height: calc(#{$content-max-width} / 1.5);
+    background: $oc-gray-0;
+    padding: 10px;
+    border-radius: 3px;
+    @include box-shadow(60px);
+    i {
+      font-size: 2rem;
+      padding-right: 10px;
+    }
+  }
+}
