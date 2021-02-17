@@ -8,6 +8,11 @@
     background: darken($color, $percent);
   }
 }
+
+button {
+  min-width: 120px;
+}
+
 body {
   button,
   .button {
@@ -19,7 +24,6 @@ body {
     color: #fff;
     // border-radius: 3px;
     padding: 10px 16px;
-    min-width: 120px;
     transition: background 0.3s;
     outline: none;
     &[disabled],
@@ -47,15 +51,15 @@ body {
     }
     &[sm] {
       padding: 0.4rem 1.8rem;
-      font-size: 12px;
+      font-size: 0.9rem;
     }
     &[md] {
       padding: 1rem 2.5rem;
-      font-size: 18px;
+      font-size: 1.2rem;
     }
     &[lg] {
       padding: 1rem 2.5rem;
-      font-size: 21px;
+      font-size: 1.5rem;
     }
 
     &.sub {
@@ -86,11 +90,4 @@ body {
       @include button-color($oc-red-6);
     }
   }
-}
-
-.hr {
-  width: 100%;
-  height: 1px;
-  background: rgba(128, 128, 128, 0.33);
-  margin: 12px 0px;
 }

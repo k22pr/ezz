@@ -1,3 +1,5 @@
+@import "./lib/open-color.scss";
+
 $colors: (
   blue: #339af0,
   red: #fa5252,
@@ -22,7 +24,7 @@ $default-box-margin: 5px;
 //grid box
 $grid-box-background: $white;
 $grid-box-color: $black;
-$grid-box-icon-color: $gray-op-5;
+$grid-box-icon-color: $oc-gray-5;
 $grid-box-padding: $default-box-padding;
 $grid-box-margin: $default-box-margin;
 $grid-box-border-radius: $default-box-radius;

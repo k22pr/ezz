@@ -1,4 +1,4 @@
-@import "../variable.scss";
+@import "../import.scss";
 
 //term을 줄수 잇는 최대 픽셀
 $maxLoop: 20;
@@ -75,4 +75,16 @@ body {
 
 .w20 {
   width: 20%;
+}
+
+@include device-tablet() {
+  .tw20 {
+    width: 20%;
+  }
+}
+
+@include device-mobile() {
+  .mw20 {
+    width: 20%;
+  }
 }

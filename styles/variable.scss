@@ -1,10 +1,9 @@
 @import "./lib/open-color.scss";
 
-$white: #fff;
+$white: rgb(240, 242, 247);
 $black: rgb(20, 23, 26);
 $default-color: $black;
 $main-color: $oc-blue-6;
-$main-deep: rgb(255, 139, 0);
 $sub-color: $oc-violet-5;
 $popup-bg: rgba(248, 249, 250, 0.75);
 
@@ -30,7 +29,3 @@ $vector: (
 );
 $device-name: (m, t, d);
 $device-size: (0px, 540px, 1100px, 65535px);
-
-// 글자 쉐도우
-$ws: rgba(255, 255, 255, 0.75);
-$bs: rgba(0, 0, 0, 0.75);
